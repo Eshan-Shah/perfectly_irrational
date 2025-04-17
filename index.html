@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfectly Irrational</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleBlogs() {
+      const extraBlogs = document.getElementById('extra-blogs');
+      const btn = document.getElementById('show-more-btn');
+      if (extraBlogs.classList.contains('hidden')) {
+        extraBlogs.classList.remove('hidden');
+        btn.innerText = 'Show less';
+      } else {
+        extraBlogs.classList.add('hidden');
+        btn.innerText = 'Show more';
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 border-b border-gray-700 bg-gray-800 shadow-md w-full">
+    <h1 class="text-2xl font-bold tracking-wide text-indigo-300">Perfectly Irrational</h1>
+    <ul class="flex gap-6 text-sm text-indigo-200">
+      <li><a href="#" class="hover:underline">Home</a></li>
+      <li><a href="#articles" class="hover:underline">Articles</a></li>
+      <li><a href="#about" class="hover:underline">About</a></li>
+      <li><a href="#contact" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="text-center px-6 py-16">
+    <h2 class="text-4xl sm:text-5xl font-medium mb-4 text-gray-100">
+      Proofs, paradoxes, and everything 
+      <span class="font-extrabold text-indigo-300">perfectly irrational</span>.
+    </h2>
+    <p class="text-gray-400 max-w-xl mx-auto text-lg">
+     A blog for curious minds, math enthusiasts, and anyone who loves the wild world of numbers.
+    </p>
+  </section>
+  
+  <!-- Articles Preview -->
+  <section id="articles" class="px-6 py-12">
+    <h3 class="text-2xl font-medium mb-6 border-b border-gray-600 pb-2 text-indigo-400">Latest Articles</h3>
+  
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Visible Blog Cards -->
+      <a href="/blogs/test/" class="block bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition transform">
+        <h4 class="text-xl font-semibold mb-2 text-gray-100">Test Blog 1</h4>
+        <p class="text-gray-500 text-sm">This is a test blog preview.</p>
+      </a>
+      <a href="/blogs/test blog 2/" class="block bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition transform">
+        <h4 class="text-xl font-semibold mb-2 text-gray-100">Test Blog 2</h4>
+        <p class="text-gray-500 text-sm">This is a test blog preview.</p>
+      </a>
+      <a href="/blogs/test blog 3/" class="block bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition transform">
+        <h4 class="text-xl font-semibold mb-2 text-gray-100">Test Blog 3</h4>
+        <p class="text-gray-500 text-sm">This is a test blog preview.</p>
+      </a>
+    </div>
+
+    <!-- Hidden Blog Cards -->
+    <div id="extra-blogs" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-8 hidden">
+      <a href="/blogs/test blog 4/" class="block bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition transform">
+        <h4 class="text-xl font-semibold mb-2 text-gray-100">Test Blog 4</h4>
+        <p class="text-gray-500 text-sm">This is a test blog preview.</p>
+      </a>
+      <a href="/blogs/test blog 5/" class="block bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition transform">
+        <h4 class="text-xl font-semibold mb-2 text-gray-100">Test Blog 5</h4>
+        <p class="text-gray-500 text-sm">This is a test blog preview.</p>
+      </a>
+      <a href="/blogs/test blog 6/" class="block bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition transform">
+        <h4 class="text-xl font-semibold mb-2 text-gray-100">Test Blog 6</h4>
+        <p class="text-gray-500 text-sm">This is a test blog preview.</p>
+      </a>
+    </div>
+
+    <div class="text-center mt-6">
+      <button id="show-more-btn" onclick="toggleBlogs()" class="text-indigo-400 hover:underline text-sm font-medium">
+        Show more
+      </button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="px-6 py-12 border-t border-gray-700 bg-gray-900">
+    <h3 class="text-2xl font-medium mb-4 text-indigo-300">About This Blog</h3>
+    <p class="text-gray-500 text-md">
+      Welcome to a blog where math gets punderful! Here, numbers aren’t just rational—they're irrational, quirky, and full of surprises. From paradoxes that make your brain twist to theorems that’ll leave you in sine of awe, this space is all about blending the beauty of mathematics with a dash of humor. Whether you're a number nerd or just here for the jokes, expect to find a derivative of fun, a limit to how far the puns can go, and plenty of math that’s more than just equation for curiosity.
+    </p>
+  </section>
+  
+  <!-- Contact -->
+  <section id="contact" class="px-6 py-12 border-t border-gray-700 bg-gray-900">
+    <h3 class="text-2xl font-medium mb-4 text-indigo-400">Get in Touch</h3>
+    <p class="text-gray-500 mb-2">Questions? Ideas? Irrational thoughts?</p>
+    <p class="text-indigo-500 underline"><a href="mailto:hello@perfectlyirrational.xyz">hello@perfectlyirrational.xyz</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm py-6 text-indigo-500 border-t border-gray-700">
+    © 2025 Eshan Shah · Made with logic & chaos
+  </footer>
+
+</body>
+</html>
